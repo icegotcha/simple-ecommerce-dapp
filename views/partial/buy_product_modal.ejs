@@ -1,0 +1,23 @@
+<div class="modal fade" id="buyProductModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Buy Product "<span id="confirmedProductName">{Product Name}</span>"?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to buy this product?</p>
+        <p class="text-secondary">Please enter your address password and click "Yes" to buy</p>
+        <input type="password" id="confirmedAddressPassword" class="form-control" placeholder="Address Password" />
+        <input type="hidden" id="confirmedProductId" value="{Product ID}">
+        <input type="hidden" id="confirmedProductQty" value="{Product Quantity}">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning btn-confirm-buy">Yes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>

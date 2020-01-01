@@ -1,0 +1,19 @@
+<div class="col">
+  <div class="product panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= product.name %></h3>
+    </div>
+    <div class="panel-body">
+      <div class="product-description">
+        <img alt="140x140" srcset="<%= product.imgPath %>" class="img-rounded img-center" data-src="holder.js/140x140"
+          data-holder-rendered="true">
+        <br /><br />
+        <span class="product-name" style="display: none;"><%= product.name %></span>
+        <strong>ID</strong>: <span class="product-id"><%= product.id %></span><br />
+        <strong>Price</strong>: 🤑 <span class="product-price"><%= product.price %></span><br />
+        <strong>Quantity</strong>: <span class="product-quantity"><%= product.quantity %></span><br />
+      </div>
+      <button type="button" class="m-2 btn btn-buy btn-warning" data-id="0">Buy</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="addProductForm" method="post" enctype="multipart/form-data">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="productImageInput">Product Image: </label>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="productImageInput" id="productImageInput"
+                aria-describedby="uploadProductImageHelp">
+              <label class="custom-file-label" for="productImageInput">Choose file...</label>
+              <small id="uploadProductImageHelp" class="form-text text-muted">Product image must be jpg, png, or
+                gif, and not larger than 10MB.</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="productNameInput">Product Name:</label>
+            <input type="text" class="form-control" name="productNameInput" id="productNameInput" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="productPriceInput">Product Price:</label>
+            <input type="text" class="form-control" name="productPriceInput" id="productPriceInput" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="productQtyInput">Product Quantity:</label>
+            <input type="text" class="form-control" name="productQtyInput" id="producttQtyInput" placeholder="">
+          </div>
+          <hr />
+          <div class="form-group">
+            <input type="password" class="form-control" name="accountPassword" id="accountPassword"
+              placeholder="Address password">
+          </div>
+          <input type="hidden" name="productSeller">
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

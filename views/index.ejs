@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to Block Store!</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/toastr.min.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/holder.min.js"></script>
+  <script src="js/toastr.min.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="bg-warning sticky-top navbar-light navbar">
+    <span class="navbar-brand mb-0 h1">Block Store</span>
+    <form class="form-inline">
+      <label for="addressSelector">Address:</label>
+      <select id="addressSelector" class="ml-2 form-control custom-select">
+        <!-- All address will stay here -->
+        <% if (accounts) { %>
+        <% accounts.forEach((account) => { %>
+        <option><%= account %></option>
+        <% }); %>
+        <% } else { %>
+        <option>No account found. Please connect to blockchain.</option>
+        <% } %>
+      </select>
+    </form>
+  </nav>
+  <!-- Body -->
+  <div class="container">
+    <div id="actionRow" class="p-2 row">
+      <button type="button" class="m-1 btn btn-add-product btn-dark" data-toggle="modal"
+        data-target="#addProductModal">Add Product</button>
+    </div>
+    <div id="productRow" class="p-2 row">
+      <!-- Real data will stay here -->
+      <% products.forEach((item) => { %>
+      <%- include('partial/product_showcase', { product: item }); %>
+      <% }); %>
+    </div>
+    <!-- Modals -->
+    <%- include('partial/add_product_modal'); %>
+    <%- include('partial/buy_product_modal'); %>
+
+    <script src="js/custom.js"></script>
+  </div> <!-- End of Container -->
+</body>
+</html>
