@@ -11,7 +11,7 @@
         "body-parser": "^1.18.3",
         "bootstrap": "^4.3.1",
         "ejs": "^2.6.1",
-        "express": "^4.16.4",
+        "express": "^4.17.3",
         "holderjs": "^2.9.6",
         "http-errors": "^1.7.2",
         "jquery": "^3.4.0",
